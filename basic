@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>My First Web Site</title>
+</head>
+
+<body bgcolor="lightblue">
+<h1>My First Web Site</h1>
+<p><strong>Welcome to my first Web site!</strong></p>
+
+<h2>Introduction</h2>
+<p>This is my place on the Web to let you know what is going on with me!</p>
+
+<h2>Education</h2>
+<p>I am a professor at Texas State University.</p>
+
+<h2>Hobbies</h2>
+<p>I enjoy live music, tacos and outdoor activities.</p>
+
+<h2>Contact Information</h2>
+<p>For more information, you can email me at croyal@txstate.edu</p>
+
+</body>
+</html>
