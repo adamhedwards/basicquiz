@@ -1,23 +1,75 @@
 <html>
 <head>
-<title>My First Web Site</title>
+<title>Let's see if this works...</title>
 </head>
 
 <body bgcolor="lightblue">
-<h1>My First Web Site</h1>
-<p><strong>Welcome to my first Web site!</strong></p>
+<h1>1, 2, 3 and 4...</h1>
+<p><strong>Let's test this out!!</strong></p>
 
 <h2>Introduction</h2>
 <p>This is my place on the Web to let you know what is going on with me!</p>
 
-<h2>Education</h2>
-<p>I am a professor at Texas State University.</p>
+<form id="form1">
 
-<h2>Hobbies</h2>
-<p>I enjoy live music, tacos and outdoor activities.</p>
+<h2>Which is the best description of a variable?</h2>
+<label for="var_string"><input type="radio" name="variable" value="0" id="var_string" />Identifies a portion of a string.</label>
+<label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />A method to join strings.</label>
+<label for="var_info"><input type="radio" name="variable" value="25" id="var_info" />Allows you to store information so it can be reused throughout the program</label>
+<label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>Allows you to make a decision based on a condition.</label>
 
-<h2>Contact Information</h2>
-<p>For more information, you can email me at croyal@txstate.edu</p>
+<h2>Which is the best description of the substring method?</h2>
+<label for="sub_string"><input type="radio" name="sub" value="25" id="sub_string"/>Identifies a portion of a string.</label>
+<label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>A method to join strings.</label>
+<label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />Allows you to store information so it can be reused throughout the program</label>
+<label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />Allows you to make a decision based on a condition.</label>
+
+<h2>Which is the best description of concatenation?</h2>
+<label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Identifies a portion of a string.</label>
+
+<label for="cat_join"><input type="radio" name="con" value="25" id="cat_join" />A method to join strings.</label>
+
+<label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />Allows you to store information so it can be reused throughout the program</label>
+
+<label for="cat_condition"><input type="radio" name="con" value="0" id="cat_condition" />Allows you to make a decision based on a condition.</label>
+
+<h2>Which is the best description of an if statement?</h2>
+<label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Identifies a portion of a string.</label>
+<label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />A method to join strings.</label>
+<label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />Allows you to store information so it can be reused throughout the program</label>
+<label for="if_condition"><input type="radio" name="ifstate"  value="25" id="if_condition" />Allows you to make a decision based on a condition.</label>
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+	   
+	   
+	   result = variable + sub + con + ifstate;
+	   
+	document.getElementById("grade").innerHTML = result;
+	   
+
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+if (result == 0) {result2 = "I don't think you studied."};
+if (result == 25) {result2 = "You need to spend more time. Try again."};
+if (result == 50) {result2 = "I think you could do better. Try again."};
+if (result == 75) {result2 = "So close. Try again."};
+if (result == 100) {result2 = "Excellent! You're a JavaScript pro!"};
+document.getElementById("grade2").innerHTML = result2; 
+
 
 </body>
 </html>
